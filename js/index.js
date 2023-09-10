@@ -85,3 +85,60 @@
 
 // // 0011
 // //0100
+// {
+//     const productName = "Microfon";
+//     const productDefault = "Name of good";
+
+//     const newProductName = "Microfon 3000";
+//     const userRole = "admin";
+//     const test2 = "test";
+
+//     const updateProductName =
+//         userRole === "admin"
+//             ? console.log("isAdmin") || newProductName
+//             : console.log("noAdmin") || productName;
+//     console.log(updateProductName);
+// }
+// //Ukraine
+
+// {
+//     let test = "test";
+//     test = productName;
+//     test = test2;
+//     consol.log(test);
+//     //Kyiv
+//     {
+//         let info = "hello world"
+//         info = `${info} ${test}`
+//     }
+//     //City
+//     {
+//         let info = "hello world"
+//         info = `${info} ${test}`
+//     }
+
+// }
+// //USA
+// {
+//     const test2 = "Hello";
+//     console.log(test2);
+// }
+const CUSTOM_NAME = 'My robot';
+const MODE = 0;
+const ROOM = 'My room';
+const COMAND = "work";
+
+if (COMAND === "change name" && MODE !== 0) {
+    const name = CUSTOM_NAME || "Robot v134s";
+    console.log(`Start ${name}`);
+}
+if (MODE === 0) {
+    console.log(`Robot is offline`);
+}
+if (COMAND === "work") {
+    const room = ROOM;
+    const mode = MODE;
+    console.log(`Mode: ${mode}; Cleaning room: ${room}`);
+}
+
+
