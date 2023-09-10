@@ -123,22 +123,94 @@
 //     const test2 = "Hello";
 //     console.log(test2);
 // }
-const CUSTOM_NAME = 'My robot';
-const MODE = 0;
-const ROOM = 'My room';
-const COMAND = "work";
+// const CUSTOM_NAME = 'My robot';
+// const MODE = 0;
+// const ROOM = 'My room';
+// const COMAND = "work";
 
-if (COMAND === "change name" && MODE !== 0) {
-    const name = CUSTOM_NAME || "Robot v134s";
-    console.log(`Start ${name}`);
-}
-if (MODE === 0) {
-    console.log(`Robot is offline`);
-}
-if (COMAND === "work") {
-    const room = ROOM;
-    const mode = MODE;
-    console.log(`Mode: ${mode}; Cleaning room: ${room}`);
-}
+// if (COMAND === "change name" && MODE !== 0) {
+//     const name = CUSTOM_NAME || "Robot v134s";
+//     console.log(`Start ${name}`);
+// }
+// if (MODE === 0) {
+//     console.log(`Robot is offline`);
+// }
+// if (COMAND === "work") {
+//     const room = ROOM;
+//     const mode = MODE;
+//     console.log(`Mode: ${mode}; Cleaning room: ${room}`);
+// }
+// 
 
 
+//Cashback
+// const price = 100;
+
+// const useCashBack = true;
+
+
+// let totalPrice = null;
+// let cashbackAmount = null;
+// let cashbackLevel = 4;
+
+// if (price < 100) {
+//     console.log(`Cashback system is available for product with price more than 100 eur`);
+//     cashbackAmount = 0;
+// } else {
+//     if (cashbackLevel > 0) {
+//         cashbackAmount = price * (cashbackLevel * 0.01);
+//     }
+
+//     cashbackLevel++;
+//     if (cashbackLevel > 5) {
+//         cashbackLevel = 1;
+//     }
+//     if (useCashBack > 0 && useCashBack) {
+//         totalPrice = price - cashbackAmount;
+//     }
+// }
+// console.log(totalPrice);
+
+
+// const buttonType = 'primary';
+
+// if (buttonType === 'primary') {
+//     console.log("primary button");
+// } else if (buttonType === 'secondary') {
+//     console.log("secondary button");
+// } else if (buttonType === 'basic') {
+//     console.log("basic button");
+// } else  {
+//     console.log("default button");
+// }
+
+
+// Switch
+
+// const buttonType = 'primary';
+
+// if (buttonType === 'primary') {
+//     console.log("primary button");
+// } else if (buttonType === 'secondary') {
+//     console.log("secondary button");
+// } else if (buttonType === 'basic') {
+//     console.log("basic button");
+// } else {
+//     console.log("default button");
+// }
+const buttonType = "123", buttonColor = 'red';
+
+switch (buttonType) {
+    case "main":
+        console.log("main");
+    case "global":
+    case "primary":
+        console.log("primary");
+        break;
+    case "second":
+    case "double":
+    case "secondary":
+        console.log("secondary");
+        break;
+    default: console.log("default button");
+}
