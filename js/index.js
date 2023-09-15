@@ -1,125 +1,44 @@
-// function calcSpace(amount, unit = "px") {
-//     return `${amount * 4}${unit}`
-// }
+// const code = "console.log('Hello')";
+// eval(code);
+function calcScreenRation(w, h) {
+    w = parseInt(w);
+    h = parseInt(h);
 
-
-function playTrackById(trackId) {
-    /// get file of song and play
-}
-function stopTrackById(trackId) {
-    /// stop track on pause
-    console.log(`get file track song with ID ${trackId} and stop`)
-}
-
-function play(trackName, trackId) {
-    console.log(`Begining ${trackName}`)
-    playTrackById(trackId)
-}
-
-function end(oldTrackName, newTrackName) {
-    console.log(`End to play ${oldTrackName}`)
-    console.log(`Next track ${newTrackName}`)
-
-}
-
-
-function pausePlay(currentTrackName) {
-    console.log(`Track ${currentTrackName} on pause`)
-    reloadDataTrack();
-    play();
-}
-// function reloadDataTrack(amount) {
-//     if (amount <= 0) {
-//         console.log(`This update shows the number of times`)
-//     } else {
-//         console.log(`Second update shows the number of times`)
-//         ////////code for update data
-//         reloadDataTrack(amount - 1);
-//     }
-// }
-// reloadDataTrack(5);
-function pauseStopByTrack(trackName, trackId) {
-    let isPause = null;
-    return () => {
-        if (isPause == true) {
-            return;
-        }
-
-        stopTrackById(trackId);
-        console.log(`Track ${trackName} on pause`);
-        isPause = true;
+    let result = w / h;
+    if (isNaN(result)) {
+        return 'error';
+    } else if (!isFinite(result)) {
+        return 'is Infinity';
+    }
+    else {
+        return result;
     }
 
 }
-const pauseStop456 = pauseStopByTrack(`IT - Consol log`, 10);
-pauseStop456();
-pauseStop456();
-pauseStop456();
-// const pauseStop123 = function pauseStopByTrack(originTrackId, originTrackName) {
-//     stopTrackById(originTrackId);
-//     console.log(`Track ${originTrackName} on pause`);
-// };
-// pauseStop123();
-
-// const runCommand = function (command, errorFn) {
-//     const result = command();
-//     if (!result) {
-//         return errorFn()
-//     }
-// }
-// runCommand(
-//     () => {
-//         console.log('Start of programm');
-//         return 1 - 1;
-//     },
-//     () => console.log("Mistake")
-// );
-// var test = 0;
-// const testFunc = () => {
-//     if (true) {
-//         let test = 10;
-
-//         test += 30;
-//     }
-//     return test;
-// };
-// console.log(testFunc())
-const memoCalcSpace = (oldAmount = null, oldUnit = null, oldResult = null) => {
-    return (amount, unit = "px") => {
-        if (oldAmount === amount && unit === oldUnit) {
-            console.log("Memo")
-            return oldResult;
-        }
-
-        oldResult = `${amount * 4}${unit}`;
-        oldAmount = amount;
-        oldUnit = unit;
-        return oldResult;
-
-
-    };
-}
-const calcSpace = memoCalcSpace();
-console.log(calcSpace(4))
-console.log(calcSpace(4))
-const getSpaceFromDesign = (componentName) => {
-    switch (componentName) {
-        case 'button':
-            return 4;
-        case 'card':
-            return 3;
-        default:
-            return 2;
-    }
+console.log(calcScreenRation("1920px", "1000px"));
+const num = parseFloat('1.55555');
+console.log(num);
+const domain = "it-brains.com.ua"
+function redirectToPath(path) {
+    path = encodeURIComponent(path);
+    const link = encodeURIComponent(`https://${domain}/${path}`)
+    /// go to page
+    console.log(link);
+    return link;
 }
 
-const isMobile = true;
-const amount = getSpaceFromDesign('button')
-const amountMobile = isMobile ? amount / 2 : amount;
-const amountInPx = calcSpace(amount);
-const calcSpaceFromDesign = (componentName) => {
-    const result = getSpaceFromDesign(componentName);
-    return calcSpace(isMobile ? result / 2 : result);
-};
-console.log("///");
-console.log(amountInPx);
+const URI =
+    "https%3A%2F%2Fit-brains.com%20.ua%2F%252Fproduct%252Fmicrofon%2520pink%252Finfo"
+function getUrl(urlInURI) {
+    urlInURI = decodeURIComponent(urlInURI);
+    console.log(urlInURI);
+    return urlInURI;
+
+}
+const path = "/product/microfon pink/info"
+const link = `https://${domain}/${path}`;
+const link1 = redirectToPath(path); ///URI
+const link2 = getUrl(link1); ///Decode URI
+console.log(link === link2)
+
+// console.log(10 + num);
