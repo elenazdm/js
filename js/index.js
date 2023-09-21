@@ -1,44 +1,28 @@
-// const code = "console.log('Hello')";
-// eval(code);
-function calcScreenRation(w, h) {
-    w = parseInt(w);
-    h = parseInt(h);
-
-    let result = w / h;
-    if (isNaN(result)) {
-        return 'error';
-    } else if (!isFinite(result)) {
-        return 'is Infinity';
+// const a = 0.00000000001;
+// const b = 0.2;
+// const c = 0.3;
+// console.log(a + b);
+// const d = a + b;
+// console.log(Number.MAX_SAFE_INTEGER)
+// console.log(Number.MIN_SAFE_INTEGER)
+// console.log(Number.MAX_VALUE)
+// console.log(Number.MIN_VALUE)
+function reviewNumber(num) {
+    console.log(num)
+    if (Number.isNaN(num)) {
+        return console.log("Is Not a Number", num)
     }
-    else {
-        return result;
+    if (!num && num !== 0) {
+        return console.log('Bad number', num)
+    }
+    if (!Number.isInteger(num)) {
+        return console.log('partly number', num)
+    }
+    if (!Number.isSafeInteger(num)) {
+        return console.log('dangerous number', num)
     }
 
-}
-console.log(calcScreenRation("1920px", "1000px"));
-const num = parseFloat('1.55555');
-console.log(num);
-const domain = "it-brains.com.ua"
-function redirectToPath(path) {
-    path = encodeURIComponent(path);
-    const link = encodeURIComponent(`https://${domain}/${path}`)
-    /// go to page
-    console.log(link);
-    return link;
+    return console.log(num)
 }
 
-const URI =
-    "https%3A%2F%2Fit-brains.com%20.ua%2F%252Fproduct%252Fmicrofon%2520pink%252Finfo"
-function getUrl(urlInURI) {
-    urlInURI = decodeURIComponent(urlInURI);
-    console.log(urlInURI);
-    return urlInURI;
-
-}
-const path = "/product/microfon pink/info"
-const link = `https://${domain}/${path}`;
-const link1 = redirectToPath(path); ///URI
-const link2 = getUrl(link1); ///Decode URI
-console.log(link === link2)
-
-// console.log(10 + num);
+reviewNumber(12)
