@@ -1,28 +1,16 @@
-// const a = 0.00000000001;
-// const b = 0.2;
-// const c = 0.3;
-// console.log(a + b);
-// const d = a + b;
-// console.log(Number.MAX_SAFE_INTEGER)
-// console.log(Number.MIN_SAFE_INTEGER)
-// console.log(Number.MAX_VALUE)
-// console.log(Number.MIN_VALUE)
-function reviewNumber(num) {
-    console.log(num)
-    if (Number.isNaN(num)) {
-        return console.log("Is Not a Number", num)
-    }
-    if (!num && num !== 0) {
-        return console.log('Bad number', num)
-    }
-    if (!Number.isInteger(num)) {
-        return console.log('partly number', num)
-    }
-    if (!Number.isSafeInteger(num)) {
-        return console.log('dangerous number', num)
-    }
+//const a = "Helloworld";
+// console.log(a.length);
+// console.log(String.fromCodePoint(128515))
+//const b = "©24356";
+// console.log(b.codePointAt(0));
+// console.log(String.raw`www.test.com/home\new`);
+//console.log(a.concat(" ", b, " ", "!"))
+//console.log(a.indexOf('r'));
+//console.log(a.at('1'))
+const c = "              HEllo world    ";
+//console.log(c.slice(-5, -7))
+console.log(c.toUpperCase())
+console.log(c.toLowerCase())
+console.log(c.trim())
 
-    return console.log(num)
-}
 
-reviewNumber(12)
